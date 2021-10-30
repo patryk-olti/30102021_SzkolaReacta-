@@ -1,10 +1,20 @@
 import React from "react";
 
-const DisactiveWindow = () => {
+import Span from "../../Components/utilis/Span";
+import Button from "../../Components/utilis/Button";
+
+const DisactiveWindow = ({ handleClick }) => {
+
+    const styles = {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+    }
 
     return(
-        <div>
-            disactive
+        <div style={styles}>
+            <Span fontSize="20" >actual user</Span>
+            <Button content="change" handleClick={handleClick} />
         </div>
     )
 }
