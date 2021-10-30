@@ -3,7 +3,7 @@ import React from "react";
 import Span from "../../Components/utilis/Span";
 import Button from "../../Components/utilis/Button";
 
-const DisactiveWindow = ({ handleClick }) => {
+const DisactiveWindow = ({ handleClick, user }) => {
 
     const styles = {
         display: 'flex',
@@ -13,7 +13,7 @@ const DisactiveWindow = ({ handleClick }) => {
 
     return(
         <div style={styles}>
-            <Span fontSize="20" >actual user</Span>
+            <Span fontSize="20" >actual user: {user}</Span>
             <Button content="change" handleClick={handleClick} />
         </div>
     )

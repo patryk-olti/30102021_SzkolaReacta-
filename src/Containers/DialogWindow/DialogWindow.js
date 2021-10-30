@@ -13,11 +13,17 @@ const DialogWindow = () => {
         boxShadow: `4px 4px 5px 0px rgba(0,0,0,0.75)`
     }
 
+    const [ user, setUser ] = useState("oltix");
     const [ active, setActive ] = useState(false);
 
     const toggleActive = () => setActive( prev => !prev );
 
-    const window = active ? <ActiveWindow /> : <DisactiveWindow handleClick={toggleActive} />;
+    const changeUser = ( value ) => {
+        setUser(value);
+        toggleActive();
+    }
+
+    const window = active ? <ActiveWindow handleClick={changeUser} /> : <DisactiveWindow handleClick={toggleActive} user={user}/>;
 
     return(
         <div style={styles}>
