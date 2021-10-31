@@ -6,8 +6,9 @@ import {
         from "react-router-dom";
 
 import MenuLink from "../../Components/utilis/MenuLink";
+import AbsoluteButton from "../../Components/utilis/AbsoluteButton";
 
-const Menu = ({ isActive }) => {
+const Menu = ({ isActive, handleClick }) => {
 
     const linkArray = [
         {
@@ -63,6 +64,7 @@ const Menu = ({ isActive }) => {
                 <ul style={styles.ul}>
                     { links }
                 </ul>
+                <AbsoluteButton text='exit' bottom='10' left='5' handleClick={handleClick} />
             </Router>
         </div>
     )

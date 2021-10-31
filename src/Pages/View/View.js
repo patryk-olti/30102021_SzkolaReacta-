@@ -39,7 +39,7 @@ const View = () => {
             <Button content='snackbar' handleClick={toggleActiveSnackBar} />
             {activeSnackBar ? <SnackBar /> : null}
             <AbsoluteButton text="menu" top="10" right="10" handleClick={toggleIsActiveMenu} />
-            <Menu isActive={isActiveMenu} />
+            <Menu isActive={isActiveMenu} handleClick={toggleIsActiveMenu} />
         </div>
     )
 }

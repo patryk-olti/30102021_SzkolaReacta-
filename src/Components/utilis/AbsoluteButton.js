@@ -1,10 +1,11 @@
 import React from 'react';
 
-const AbsoluteButton = ({ text, top, left, right, handleClick }) => {
+const AbsoluteButton = ({ text, top, bottom, left, right, handleClick }) => {
 
     const styles = {
         position: 'absolute',
         top: top ? `${top}px` : null,
+        bottom: bottom ? `${bottom}px` : null,
         left: left ? `${left}px` : null,
         right: right ? `${right}px` : null,
 
