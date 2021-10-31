@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import DialogWindow from '../../Containers/DialogWindow/DialogWindow';
 import Button from '../../Components/utilis/Button';
 import SnackBar from '../../Containers/SnackBar/SnackBar';
+import AbsoluteButton from '../../Components/utilis/AbsoluteButton';
 
 const View = () => {
 
@@ -12,6 +13,7 @@ const View = () => {
     const toggleActiveSnackBar = () => setActiveSnackBar( prev => !prev );
 
     const styles = {
+        position: 'relative',
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -32,6 +34,7 @@ const View = () => {
             <DialogWindow />
             <Button content='snackbar' handleClick={toggleActiveSnackBar} />
             {activeSnackBar ? <SnackBar /> : null}
+            <AbsoluteButton text="menu" top="10" right="10" />
         </div>
     )
 }
