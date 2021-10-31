@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AbsoluteButton = ({ text, top, left, right }) => {
+const AbsoluteButton = ({ text, top, left, right, handleClick }) => {
 
     const styles = {
         position: 'absolute',
@@ -17,7 +17,7 @@ const AbsoluteButton = ({ text, top, left, right }) => {
 
 
     return(
-        <button style={styles} >
+        <button style={styles} onClick={handleClick} >
             { text }
         </button>
     )
