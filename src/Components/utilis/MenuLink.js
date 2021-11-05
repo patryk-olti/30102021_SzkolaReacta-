@@ -29,7 +29,7 @@ const MenuLink = ({ path, content }) => {
 
     return(
         <li style={styles.li}>
-            <NavLink to={path} style={styles.navLink} exact activeStyle={styles.active}>
+            <NavLink exact to={path} style={styles.navLink} exact activeStyle={styles.active}>
                 { content }
             </NavLink>
         </li>

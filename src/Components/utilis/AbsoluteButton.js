@@ -13,7 +13,8 @@ const AbsoluteButton = ({ text, top, bottom, left, right, handleClick }) => {
         border: '2px solid black',
         borderRadius: '5px',
         backgroundColor: 'white',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        zIndex: '100'
     }
 
 

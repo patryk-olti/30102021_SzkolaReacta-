@@ -1,7 +1,7 @@
 import React from "react";
 
 import { 
-            BrowserRouter as Router
+            BrowserRouter
         } 
         from "react-router-dom";
 
@@ -18,18 +18,13 @@ const Menu = ({ isActive, handleClick }) => {
         },
         {
             id: 2,
-            path: 'about',
-            content: 'about'
+            path: 'dialog',
+            content: 'dialog'
         },
         {
             id: 3,
-            path: 'contact',
-            content: 'contact'
-        },
-        {
-            id: 4,
-            path: 'galery',
-            content: 'galery'
+            path: 'snackbar',
+            content: 'snackbar'
         }
     ]
 
@@ -45,6 +40,7 @@ const Menu = ({ isActive, handleClick }) => {
         borderRight: '1px solid black',
         backgroundColor: '#F0F8FF',
         transition: `1s`,
+        zIndex: '100',
         ul: {
             listStyleType: 'none'
         }   
@@ -60,12 +56,10 @@ const Menu = ({ isActive, handleClick }) => {
 
     return(
         <div style={styles}>
-            <Router>
                 <ul style={styles.ul}>
                     { links }
                 </ul>
                 <AbsoluteButton text='exit' bottom='10' left='5' handleClick={handleClick} />
-            </Router>
         </div>
     )
 }

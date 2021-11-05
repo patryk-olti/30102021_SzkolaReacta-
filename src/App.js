@@ -1,11 +1,33 @@
+import React, { useState } from 'react';
+
 import './App.css';
 
-import View from './Pages/View/View';
+import { BrowserRouter , Routes, Route } from 'react-router-dom';
 
-function App() {
+import AbsoluteButton from './Components/utilis/AbsoluteButton';
+import Menu from './Containers/Menu/Menu';
+import Home from './Pages/Home';
+import DialogPage from './Pages/DialogPage';
+import SnackBarPage from './Pages/SnackBarPage';
+
+const App = () => {
+
+  const [ isActiveMenu, setIsActiveMenu ] = useState(false);
+  const toggleIsActiveMenu = () => setIsActiveMenu( prev => !prev);
+
   return (
     <div className="App">
-      <View />
+      <BrowserRouter>
+        <AbsoluteButton text="menu" top="10" right="10" handleClick={toggleIsActiveMenu} />
+        <Menu isActive={isActiveMenu} handleClick={toggleIsActiveMenu} />
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/dialog' element={<DialogPage />} />
+          <Route path='/snackbar' element={<SnackBarPage />} />
+        </Routes>
+        
+      </BrowserRouter>
     </div>
   );
 }
