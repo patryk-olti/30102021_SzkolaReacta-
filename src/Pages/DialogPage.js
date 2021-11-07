@@ -2,19 +2,12 @@ import React from 'react';
 
 import DialogWindow from '../Containers/DialogWindow/DialogWindow';
 
+import '../styles/styles.scss';
+
 const DialogPage = () => {
 
-    const styles = {
-        position: 'relative',
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
-
     return(
-        <div style={styles}>
+        <div className='container'>
             <DialogWindow />
         </div>
     )
