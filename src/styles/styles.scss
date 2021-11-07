@@ -1,0 +1,39 @@
+@import 'colors';
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dot{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: $beige-color;
+    max-height: 100vh;
+}
+
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'roboto';
+    line-height: 200%;
+    color: $blue-color;
+    font-weight: 700;
+}
+
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: $blue-color;
+    z-Index: -1;
+}
